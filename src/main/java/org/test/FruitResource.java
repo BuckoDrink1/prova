@@ -25,4 +25,12 @@ public class FruitResource {
         fruitService.add(fruit);
         return list();
     }
+
+    @POST
+    @Path("/putFruit")
+    public void addInPost(@FormParam("name") String name, @FormParam("description") String description) {
+        Fruit fruit = new Fruit(name, description);
+
+        fruitService.add(fruit);
+    }
 }
