@@ -17,7 +17,7 @@ public class formResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String getForm() throws IOException {
-        String fullPath = PATH + "form.html";
+        String fullPath = "src/main/java/org/test/form.html";
 
         return Files.readString(Paths.get(fullPath));
     }
