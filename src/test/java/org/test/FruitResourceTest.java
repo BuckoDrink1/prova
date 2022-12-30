@@ -20,6 +20,6 @@ public class FruitResourceTest {
                 .get("/fruits")
                 .then()
                 .statusCode(200)
-                .body(is(fruitService.list()));
+                .body(is(fruitService.list().toString()));
     }
 }
